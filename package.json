@@ -1,0 +1,60 @@
+{
+    "name": "cybertree-folder-generator",
+    "private": true,
+    "version": "1.0.0",
+    "description": "Cyberpunk-themed folder structure generator and AI architect tool.",
+    "author": "CyberTree Systems",
+    "type": "module",
+    "main": "electron-main.cjs",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+        "preview": "vite preview",
+        "electron": "electron .",
+        "electron:build": "npm run build && electron-builder"
+    },
+    "dependencies": {
+        "@google/generative-ai": "latest",
+        "lucide-react": "^0.300.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+        "@types/node": "latest",
+        "@types/react": "latest",
+        "@types/react-dom": "latest",
+        "@typescript-eslint/eslint-plugin": "latest",
+        "@typescript-eslint/parser": "latest",
+        "@vitejs/plugin-react": "latest",
+        "autoprefixer": "^10.4.16",
+        "electron": "latest",
+        "electron-builder": "latest",
+        "eslint": "latest",
+        "eslint-plugin-react": "^7.37.5",
+        "eslint-plugin-react-hooks": "^7.0.1",
+        "eslint-plugin-react-refresh": "^0.4.26",
+        "globals": "^16.5.0",
+        "postcss": "^8.4.32",
+        "tailwindcss": "3.4.1",
+        "typescript": "latest",
+        "typescript-eslint": "^8.51.0",
+        "vite": "latest"
+    },
+    "build": {
+        "appId": "com.cybertree.generator",
+        "productName": "Cybertree Gen",
+        "directories": {
+            "output": "dist_electron"
+        },
+        "files": [
+            "dist/**/*",
+            "electron-main.cjs",
+            "package.json"
+        ],
+        "win": {
+            "target": "nsis",
+            "icon": "public/favicon.ico"
+        }
+    }
+}

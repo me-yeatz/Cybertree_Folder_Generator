@@ -1,0 +1,44 @@
+
+> cybertree-folder-generator@1.0.0 electron:build
+> npm run build && electron-builder
+
+
+> cybertree-folder-generator@1.0.0 build
+> tsc && vite build
+
+The `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.
+[36mvite v7.2.7 [32mbuilding client environment for production...[36m[39m
+transforming...
+[32m✓[39m 1395 modules transformed.
+rendering chunks...
+computing gzip size...
+[2mdist/[22m[32mindex.html                 [39m[1m[2m  0.70 kB[22m[1m[22m[2m │ gzip:  0.40 kB[22m
+[2mdist/[22m[35massets/index-CQeCl3_w.css  [39m[1m[2m 46.87 kB[22m[1m[22m[2m │ gzip:  9.18 kB[22m
+[2mdist/[22m[36massets/index-fhlrW_iy.js   [39m[1m[2m168.41 kB[22m[1m[22m[2m │ gzip: 53.95 kB[22m
+[32m✓ built in 30.93s[39m
+  • electron-builder  version=26.0.12 os=10.0.26200
+  • loaded configuration  file=package.json ("build" field)
+  • executing @electron/rebuild  electronVersion=39.2.7 arch=x64 buildFromSource=false appDir=./
+  • installing native dependencies  arch=x64
+  • completed installing native dependencies
+  • packaging       platform=win32 arch=x64 electron=39.2.7 appOutDir=dist_electron\win-unpacked
+  ⨯ remove C:\Users\meyea\Documents\GitHub\Cybertree Folder Generator\dist_electron\win-unpacked\resources\app.asar: The process cannot access the file because it is being used by another process.
+github.com/develar/go-fs-util.EnsureEmptyDir
+	/Users/runner/go/pkg/mod/github.com/develar/go-fs-util@v0.0.0-20190620175131-69a2d4542206/fs.go:98
+github.com/develar/app-builder/pkg/electron.UnpackElectron.func1.1
+	/Users/runner/work/app-builder/app-builder/pkg/electron/electronUnpack.go:38
+github.com/develar/app-builder/pkg/util.MapAsyncConcurrency.func2
+	/Users/runner/work/app-builder/app-builder/pkg/util/async.go:68
+runtime.goexit
+	/Users/runner/hostedtoolcache/go/1.21.13/arm64/src/runtime/asm_amd64.s:1650  
+  ⨯ C:\Users\meyea\Documents\GitHub\Cybertree Folder Generator\node_modules\app-builder-bin\win\x64\app-builder.exe process failed ERR_ELECTRON_BUILDER_CANNOT_EXECUTE
+Exit code:
+1  failedTask=build stackTrace=Error: C:\Users\meyea\Documents\GitHub\Cybertree Folder Generator\node_modules\app-builder-bin\win\x64\app-builder.exe process failed ERR_ELECTRON_BUILDER_CANNOT_EXECUTE
+Exit code:
+1
+    at ChildProcess.<anonymous> (C:\Users\meyea\Documents\GitHub\Cybertree Folder Generator\node_modules\builder-util\src\util.ts:259:14)
+    at Object.onceWrapper (node:events:623:26)
+    at ChildProcess.emit (node:events:508:28)
+    at ChildProcess.cp.emit (C:\Users\meyea\Documents\GitHub\Cybertree Folder Generator\node_modules\cross-spawn\lib\enoent.js:34:29)
+    at maybeClose (node:internal/child_process:1101:16)
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:305:5)

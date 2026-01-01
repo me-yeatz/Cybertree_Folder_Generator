@@ -1,0 +1,1 @@
+services/geminiService.ts(6,32): error TS2339: Property 'env' does not exist on type 'ImportMeta'.

@@ -1,0 +1,14 @@
+directories:
+  output: dist_electron
+  buildResources: build
+appId: com.cybertree.generator
+productName: Cybertree Gen
+files:
+  - filter:
+      - dist/**/*
+      - electron-main.cjs
+      - package.json
+win:
+  target: nsis
+  icon: public/favicon.ico
+electronVersion: 39.2.7

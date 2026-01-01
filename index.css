@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Fira+Code:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    @apply bg-cyber-black text-white font-tech;
+    background: radial-gradient(circle at center, #1a1a1c 0%, #030303 100%);
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  #root {
+    @apply h-full w-full;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    background: rgba(20, 20, 23, 0.4);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 219, 137, 0.1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  .glass-panel-heavy {
+    background: rgba(10, 10, 12, 0.8);
+    backdrop-filter: blur(12px);
+    border-right: 1px solid rgba(255, 219, 137, 0.1);
+  }
+
+  .neon-text {
+    text-shadow: 0 0 5px rgba(255, 219, 137, 0.5), 0 0 10px rgba(255, 219, 137, 0.3);
+  }
+
+  .icon-glow {
+    filter: drop-shadow(0 0 2px rgba(255, 219, 137, 0.5));
+  }
+
+  /* Custom scrollbar for Webkit */
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: #0f0f10;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: #ffdb89;
+    border-radius: 3px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: #ffecb3;
+  }
+}
+
+@layer utilities {
+  .scanline {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .scanline::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%,
+        rgba(0, 0, 0, 0.25) 50%);
+    background-size: 100% 4px;
+    z-index: 50;
+    pointer-events: none;
+    opacity: 0.6;
+  }
+
+  .clip-corner {
+    clip-path: polygon(0 0,
+        100% 0,
+        100% calc(100% - 10px),
+        calc(100% - 10px) 100%,
+        0 100%);
+  }
+
+  .edge-glow-l {
+    box-shadow: inset 1px 0 10px rgba(255, 219, 137, 0.05);
+  }
+
+  .edge-glow-r {
+    box-shadow: inset -1px 0 10px rgba(255, 219, 137, 0.05);
+  }
+}
