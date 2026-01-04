@@ -7,7 +7,10 @@ import { AsciiPreview } from './components/AsciiPreview';
 import { generateStructureFromPrompt } from './services/aiService';
 import { Sparkles, FolderPlus, FilePlus, RefreshCcw, Cpu, AlertTriangle, Hexagon, Power, Search, Download } from 'lucide-react';
 
+import { LandingPage } from './components/LandingPage';
+
 const App: React.FC = () => {
+    const [showLanding, setShowLanding] = useState(true);
     const [tree, setTree] = useState<TreeNode[]>(INITIAL_TREE);
     const [selectedId, setSelectedId] = useState<string | null>('root');
     const [aiPrompt, setAiPrompt] = useState('');
@@ -76,6 +79,10 @@ const App: React.FC = () => {
     const displayedTree = useMemo(() => {
         return filterTree(tree, searchQuery);
     }, [tree, searchQuery]);
+
+    if (showLanding) {
+        return <LandingPage onLaunch={() => setShowLanding(false)} />;
+    }
 
     return (
         <div className="h-full flex flex-col md:flex-row bg-cyber-black text-cyber-gold font-tech selection:bg-cyber-gold selection:text-cyber-black overflow-hidden relative scanline">
