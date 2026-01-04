@@ -20,7 +20,7 @@
 
 <div align="center">
 
-**[▶️ Try it Live](#-getting-started)** · **[📚 Documentation](#--features)** · **[🐛 Report Issue](https://github.com/me-yeatz/Cybertree-Folder-Generator/issues)**
+**[▶️ Try it Live](https://cybertree-folder-generator.vercel.app/)** · **[📚 Documentation](#-features)** · **[🐛 Report Issue](https://github.com/me-yeatz/Cybertree_Folder_Generator/issues)**
 
 </div>
 
@@ -31,7 +31,7 @@
 **Made with ❤️ by [me.yeatz](https://github.com/me-yeatz)**
 
 - 🌐 GitHub: [github.com/me-yeatz](https://github.com/me-yeatz)
-- 📧 Contact: [Open an Issue](https://github.com/me-yeatz/Cybertree-Folder-Generator/issues)
+- 📧 Contact: [Open an Issue](https://github.com/me-yeatz/Cybertree_Folder_Generator/issues)
 
 ---
 
@@ -84,8 +84,8 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/me-yeatz/Cybertree-Folder-Generator.git
-cd "Cybertree Folder Generator"
+git clone https://github.com/me-yeatz/Cybertree_Folder_Generator.git
+cd Cybertree_Folder_Generator
 
 # Install dependencies
 npm install
@@ -156,8 +156,9 @@ VITE_AI_API_KEY=lm-studio
 ## 📁 Project Structure
 
 ```
-CyberTree Folder Generator/
+CyberTree/
 ├── components/           # React components
+│   ├── LandingPage.tsx  # Immersive entry experience
 │   ├── AsciiPreview.tsx # ASCII tree preview panel
 │   └── TreeNodeItem.tsx # Individual tree node component
 ├── services/            # API integration
@@ -165,7 +166,7 @@ CyberTree Folder Generator/
 │   └── geminiService.ts # Google Gemini integration
 ├── utils/              # Utility functions
 │   └── treeUtils.ts   # Tree manipulation & export logic
-├── App.tsx            # Main application component
+├── App.tsx            # Main application component & View Switcher
 ├── index.tsx          # React entry point
 ├── types.ts           # TypeScript interfaces
 ├── constants.ts       # App constants & initial tree
