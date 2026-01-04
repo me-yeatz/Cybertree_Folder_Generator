@@ -6,7 +6,7 @@ function createWindow() {
         width: 1200,
         height: 800,
         backgroundColor: '#050505',
-        // icon: path.join(__dirname, 'public/favicon.ico'), // Icon disabled until file present
+        icon: path.join(__dirname, 'public/Apps Icon.png'),
         webPreferences: {
             nodeIntegration: true,
             contextIsolation: false,
